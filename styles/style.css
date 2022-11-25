@@ -26,9 +26,7 @@ img {
   display: block;
 }
 
-.contact-link,
-.nav-link,
-.page-link{
+.link{
   text-decoration: none;
 }
 .container {
@@ -44,7 +42,15 @@ img {
   justify-content: space-between;
   }
 
-.hidden-title {position: absolute;
+  .section__title{
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  }
+
+.title--hidden {position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -56,19 +62,20 @@ img {
   overflow: hidden;}
 
 /* header */
-.page-header {
+.header {
   border-bottom: 1px solid #ECECEC;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   align-items:baseline
 }
-.header-container {
+
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
   align-items: center;
 }
@@ -83,15 +90,16 @@ img {
   text-decoration: none;
   display: block;
   }
-.logo-color {
+
+.logo--accent {
   color: var(--accent-color);
 }
-.page-header .logo {
+.header__logo {
   padding: 24px 0;
 }
 
 /* site-nav */
-.site-nav {
+.list__nav{
   list-style: none;
   font-weight: 500;
   line-height: 1.15;
@@ -101,30 +109,30 @@ img {
   margin-left: 93px;
   }
 
-.site-nav :not(:last-child) {
+.nav__list :not(:last-child) {
   margin-right: 50px;
 }
 
-.nav-link {
+.nav__link {
   position: relative;
   color: var(--title-text-color);
   padding: 32px 0;
   transition: color var(--hover-anime);
   }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-color);  
 }
 
-.nav-link.current {
+.nav__link--current {
   color: var(--accent-color);
 }
 
-.nav-item {
+.nav__item {
   position: relative;
 }
-.current::after {
+.nav__link--current::after {
 content: '';
 display: block;
 position: absolute;
@@ -138,18 +146,15 @@ background-color: var(--accent-color);
 
 
 /* contacts */
-.contacts{
+.contact__list{
   margin-left: auto;
   display: flex;
- }
-
-.list.contacts {
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: 0.02em;
-  }
-    
-.contact-link {
+ }
+
+.contact__link {
   display: flex;
   align-items: center;
   color: var(--primary-text-color);
@@ -157,34 +162,22 @@ background-color: var(--accent-color);
   transition: color var(--hover-anime);
 }
 
-.contact-link:hover,
-.contact-link:focus {
+.contact__link:hover,
+.contact__link:focus {
   color: var(--accent-color);
   }
 
- .contacts :not(:last-child) {
-    margin-right: 50px;
+ .contact__link :last-child {
+    margin-left: 50px;
   }
 
-  .email-icon,
-  .tel-icon {
+  .contact__link--email-icon,
+  .contact__link--tel-icon {
     margin-right: 10px;
     fill: currentColor;
  }
     
 /* main */
-
-.section-title{
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  }
-
-.title {
-  color: var(--title-text-color);
-  margin-bottom: 10px;
-}
 
 .hero {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-img.jpg);
@@ -201,7 +194,7 @@ background-color: var(--accent-color);
   padding-bottom: 200px; 
   }
 
-.hero-title {
+.hero__title {
   color: var(--white-text-color);
   font-weight: 900;
   font-size: 44px;
@@ -226,11 +219,9 @@ background-color: var(--accent-color);
   background-color: var(--white-text-color);
   cursor: pointer;
   font-family: inherit;
-  display: flex;
-  align-items: center;
   }
 
-.btn.main {
+.btn--main {
   width: 216px;
   height: 50px;
   color: var(--white-text-color);
@@ -245,12 +236,12 @@ background-color: var(--accent-color);
   transition: background-color var(--hover-anime);
   }
 
-.btn.main:hover,
-.btn.main:focus {
+.btn--main:hover,
+.btn--main:focus {
   background-color: #188CE8;  
 }
 
-.btn.secondary {
+.btn--secondary {
   color: var(--title-text-color);
   background-color: var(--btn-bgc);
   font-weight: 500;
@@ -259,8 +250,8 @@ background-color: var(--accent-color);
   transition: color var(--hover-anime), background-color var(--hover-anime), box-shadow var(--hover-anime);
 }
 
-.btn.secondary:hover,
-.btn.secondary:focus {
+.btn--secondary:hover,
+.btn--secondary:focus {
   color: var(--white-text-color);
   background-color: var(--accent-color);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
@@ -271,24 +262,24 @@ background-color: var(--accent-color);
   padding-top: var(--primary-pt);
 }
 
-.benefits-list {
-  display: flex;  
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.benefits .title {
+.benefits__title{
   color: var(--title-text-color);
+  margin-bottom: 10px;
+   color: var(--title-text-color);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
 }
-.benefits-description {  
-  line-height: 1.71;
-  width: 270px;
+
+
+.benefits__list {
+  display: flex;  
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.benefits-items {
+.benefits__item {
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
@@ -298,27 +289,28 @@ background-color: var(--accent-color);
   align-items: center;
   justify-content: center;
 }
+.benefits__description {  
+  line-height: 1.71;
+  width: 270px;
+}
+
 
 /* activity */
 
 .activity {padding-top: var(--primary-pt);
  padding-bottom: var(--primary-pt);}
 
-.section-title {
-  text-align: center;
-}
-
-.activity-list {
+.activity__list {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.activity-item {
+.activity__item {
   position: relative;
 }
-.activity-thumb {
+.activity__thumb {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -327,7 +319,7 @@ background-color: var(--accent-color);
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.activity-descr {    
+.activity__descr {    
   color: var(--white-text-color);
   text-transform: uppercase;
   font-size: 14px;
@@ -343,45 +335,45 @@ background-color: var(--accent-color);
   padding-bottom: var(--primary-pt);
   background-color: var(--btn-bgc);
 }
-
-.teem-descr {
-  padding: 30px 10px;
-}
-.teem .title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-}
-
-.teem .profession {
-  font-size: 16px;
-  line-height: 1.19;
-  margin-top: 10px;
-  margin-bottom: 16px;
-}
-
-  .teem-list {
+.teem__list {
     display: flex;
     margin-top: 50px;
     text-align: center;
     flex-wrap: wrap;
     gap: 0 30px;
-    
 }
-  .teem-card {
+
+.teem__card {
     background-color: #fff;
     flex-basis: calc(100% - 30px * 3) / 3;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
-.social-list {
+.teem__descr {
+  padding: 30px 10px;
+}
+.teem__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19; 
+  color: var(--title-text-color);
+}
+
+.teem__profession {
+  font-size: 16px;
+  line-height: 1.19;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.teem__social-list {
   display: flex;
   justify-content: center;
   gap: 0 10px;
   }
 
-.social-link {
+.teem__social-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -392,18 +384,18 @@ background-color: var(--accent-color);
   transition: background-color var(--hover-anime);
   }
 
-  .social-link:hover,
-  .social-link:focus {
+  .teem__social-link:hover,
+  .teem__social-link:focus {
     background-color: var(--accent-color)
   }
 
-  .social-icon {
+  .teem__social-icon {
     fill: #AFB1B8;
     transition: fill var(--hover-anime)
   }
 
-  .social-item:hover .social-icon,
-  .social-item:focus .social-icon {
+  .teem__social-item:hover .teem__social-icon,
+  .teem__social-item:focus .teem__social-icon {
     fill: var(--white-text-color);
   }
 
@@ -416,18 +408,18 @@ background-color: var(--accent-color);
   margin-right: auto;
 }
 
-.clients .section-title {
+.clients .section__title {
   padding-bottom: 50px;
 }
 
-.client-list {
+.client__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap:0 30px;
   }
 
-  .client-link {
+  .client__link {
   width: 170px;
   height: 92px;
   border: 1px solid #AFB1B8;
@@ -438,20 +430,19 @@ background-color: var(--accent-color);
   transition: border var(--hover-anime);
   }
   
-  .client-link:hover,
-  .client-link:focus {
+  .client__link:hover,
+  .client__link:focus {
     border: 1px solid var(--accent-color);
-    
-   }
+  }
 
-  .client-icon {
+  .client__icon {
     fill: #AFB1B8;
     transition: fill var(--hover-anime);
     
   }
 
-  .client-link:hover .client-icon,
-  .client-link:focus .client-icon {
+  .client__link:hover .client__icon,
+  .client__link:focus .client__icon {
     fill: var(--accent-color);
   }
 
