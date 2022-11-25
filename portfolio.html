@@ -15,40 +15,35 @@
   </head>
   <body>
     
-    <header class="page-header">
-      <div class="header-container container">
-      <nav class="nav-list">
-        <a href="./index.html" class="logo"><span class="logo-color">Web</span>Studio</a>
-        <!-- menu -->
-        <ul class="list site-nav">
-          <li class="nav-item"><a href="./index.html" class="nav-link ">Студія</a></li>
-          <li class="nav-item"><a href="./portfolio.html" class="nav-link current">Портфоліо</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Контакти</a></li>
-        </ul>
-      </nav>
-      <!-- contacts -->
-     
-      <ul class="list  contacts">        
-        <li class="contact-item">
-          <a href="mailto:info@devstudio.com" class="contact-link email">
-            <svg class="email-icon" 
-            width="16"
-            height="12" >
-              <use href="./image/icons.svg#email"></use>
-            </svg>
-            info@devstudio.com</a>
-        </li>
-        <li class="contact-item">
-          <a href="tel:+380961111111" class="contact-link tel">
-            <svg class="tel-icon" 
-            width="10";
-            height="16">
-              <use href="./image/icons.svg#tel"></use>
-            </svg>
-            +38 096 111 11 11</a>
-          </div>
-      </ul>
+    <header class="header">
+      <div class="header__container container">
+        <nav class="list nav__list">
+          <a href="./index.html" class="logo header__logo"><span class="logo--accent">Web</span>Studio</a>
+          <!-- menu -->
+          <ul class="list list__nav">
+            <li class="nav__item"><a href="./index.html" class="link nav__link ">Студія</a></li>
+            <li class="nav__item"><a href="./portfolio.html" class="link nav__link nav__link--current">Портфоліо</a></li>
+            <li class="nav__item"><a href="" class="link nav__link">Контакти</a></li>
+          </ul>
+        </nav>
+        <!-- contacts -->
     
+        <ul class="list  contact__list">
+          <li class="contact__item">
+            <a href="mailto:info@devstudio.com" class="link contact__link">
+              <svg class="contact__link--email-icon" width="16" height="12">
+                <use href="./image/icons.svg#email"></use>
+              </svg>
+              info@devstudio.com</a>
+          </li>
+          <li class="contact-item">
+            <a href="tel:+380961111111" class=" link contact__link">
+              <svg class="contact__link--tel-icon" width="10" ; height="16">
+                <use href="./image/icons.svg#tel"></use>
+              </svg>
+              +38 096 111 11 11</a>
+      </div>
+      </ul>
       </div>
     </header>
   
@@ -59,13 +54,13 @@
         <h1 class="hidden-title">Проекти</h1>
         <!-- filter -->
         <ul class="list btn-list">
-          <li class="btn-item"><button type="button" class="btn secondary">Усі</button></li>
+          <li class="btn-item"><button type="button" class="btn btn--secondary">Усі</button></li>
           <li class="btn-item">
-            <button type="button" class="btn secondary">Веб-сайти</button>
+            <button type="button" class="btn btn--secondary">Веб-сайти</button>
           </li>
-          <li class="btn-item"><button type="button" class="btn secondary">Додатки</button></li>
-          <li class="btn-item"><button type="button" class="btn secondary">Дизайн</button></li>
-          <li class="btn-item"><button type="button" class="btn secondary">Маркетинг</button>
+          <li class="btn-item"><button type="button" class="btn btn--secondary">Додатки</button></li>
+          <li class="btn-item"><button type="button" class="btn btn--secondary">Дизайн</button></li>
+          <li class="btn-item"><button type="button" class="btn btn--secondary">Маркетинг</button>
           </li>
         </ul>
 
