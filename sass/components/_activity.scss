@@ -1,17 +1,18 @@
 .activity {padding-top: var(--primary-pt);
     padding-bottom: var(--primary-pt);}
    
-   .activity__list {
+   &__list {
      margin-top: 50px;
      display: flex;
      flex-wrap: wrap;
      gap: 30px;
    }
    
-   .activity__item {
+   &__item {
      position: relative;
    }
-   .activity__thumb {
+   
+   &__thumb {
      position: absolute;
      bottom: 0;
      left: 0;
@@ -20,7 +21,7 @@
      background-color: rgba(47, 48, 58, 0.8);
    }
    
-   .activity__descr {    
+   &__descr {    
      color: var(--white-text-color);
      text-transform: uppercase;
      font-size: inherit;
@@ -28,5 +29,4 @@
      text-align: center;
      padding-top: 27px;
      padding-bottom: 27px;
-   
    }

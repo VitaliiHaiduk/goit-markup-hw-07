@@ -5,10 +5,19 @@
     margin-right: auto;
     align-items:baseline
   }
-  
-  .header__container {
+   
+.header__container {
     align-items: center;
     display: flex;
+    }
+
+.header__nav {
+      display: flex;
+      align-items: center;
+  
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
     }
 
 .header__nav-list{
@@ -19,69 +28,40 @@
   display: flex;
   align-items: center;  
   margin-left: 93px;
-  }
-
-  .header__nav {
-    display: flex;
-    align-items: center;
-  }
-
-  .header__nav :not(:last-child) {
-  margin-right: 50px;
-}
+   }
 
 .header__nav-link {
   position: relative;
   color: var(--title-text-color);
   padding: 32px 0;
   transition: color var(--hover-anime);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+  color: var(--accent-color);  
+  }
 }
 
-.header__nav-list{
-    list-style: none;
-    font-weight: 500;
-    line-height: 1.15;
-    letter-spacing: 0.02em;
-    display: flex;
-    align-items: center;  
-    margin-left: 93px;
-    }
-  
-.header__nav {
-      display: flex;
-      align-items: center;
-    }
-  
-.header__nav :not(:last-child) {
-    margin-right: 50px;
-  }
-  
-.header__nav-link {
-    position: relative;
-    color: var(--title-text-color);
-    padding: 32px 0;
-    transition: color var(--hover-anime);
-}
-.header__nav-link:hover,
-.header__nav-link:focus {
-  color: var(--accent-color);  
-}
+
 
 .header__nav-link--current {
   color: var(--accent-color);
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    }
 }
 
-.header__nav-link--current::after {
-content: '';
-display: block;
-position: absolute;
-left: 0;
-bottom: -1px;
-width: 100%;
-height: 4px;
-border-radius: 2px;
-background-color: var(--accent-color);
-}
+
 
 .header__nav-item {
   position: relative;
@@ -102,19 +82,21 @@ background-color: var(--accent-color);
   color: var(--primary-text-color);
   padding: 32px 0;
   transition: color var(--hover-anime);
-}
 
-.header__contact-link:hover,
-.header__contact-link:focus {
+  &:hover,
+  &:focus {
   color: var(--accent-color);
   }
 
- .header__contact-link :last-child {
+  & :last-child {
     margin-left: 50px;
   }
 
-  .header__contact-link--email-icon,
-  .header__contact-link--tel-icon {
+  &--email-icon,
+  &--tel-icon {
     margin-right: 10px;
     fill: currentColor;
  }
+}
+
+  

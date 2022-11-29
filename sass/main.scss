@@ -1,8 +1,13 @@
 // util styles 
 
 @import './utils/variables';
+@import './utils/reset';
+@import './utils/placeholders';
+@import './utils/mixins';
+
 
 // component styles
+
 
 @import './components/header';
 @import './components/logo';
@@ -14,4 +19,6 @@
 @import './components/clients';
 @import './components/socials';
 @import './components/footer';
-@import './components/_modal';
+@import './components/modal';
+@import './components/portfolio';
+@import './components/typography';

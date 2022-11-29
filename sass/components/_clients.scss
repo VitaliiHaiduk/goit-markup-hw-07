@@ -26,20 +26,21 @@
     align-items: center;
     border-radius: 4px;
     transition: border var(--hover-anime);
-    }
-    
-    .clients__link:hover,
-    .clients__link:focus {
+
+    &:hover,
+    &:focus {
       border: 1px solid var(--accent-color);
     }
-  
+    &:hover .clients__icon,
+    &:focus .clients__icon {
+      fill: var(--accent-color);
+    }
+   }
+      
     .clients__icon {
       fill: #AFB1B8;
       transition: fill var(--hover-anime);
       
     }
   
-    .clients__link:hover .clients__icon,
-    .clients__link:focus .clients__icon {
-      fill: var(--accent-color);
-    }
+    
